@@ -17,19 +17,19 @@ const { title, description, src, href = "/", play = false } = Astro.props;
   {src ? <img class="w-10 h-10 rounded-lg" src={src} alt={title} /> : <slot />}
   <div class="flex flex-col justify-center gap-1 overflow-hidden">
     <h3
-      class="w-full font-semibold text-black/80 whitespace-nowrap text-ellipsis overflow-x-clip text-sm leading-none"
+      class="w-full font-semibold text-black/80 dark:text-white whitespace-nowrap text-ellipsis overflow-x-clip text-sm leading-none"
     >
       {title}
     </h3>
     <h5
-      class="text-black/60 font-[500] text-sm leading-none whitespace-nowrap text-ellipsis"
+      class="text-black/60 dark:text-neutral-400 font-[500] text-sm leading-none whitespace-nowrap text-ellipsis"
     >
       {description}
     </h5>
   </div>
   {
     play && (
-      <div class="text-black/50 hidden sm:flex  absolute right-4 p-1 rounded-lg border border-zinc-300 svg transition-colors">
+      <div class="text-black/50 hidden sm:flex  absolute right-4 p-1 rounded-lg border border-zinc-300 dark:border-zinc-600 svg transition-colors">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1.5rem"
@@ -48,6 +48,7 @@ const { title, description, src, href = "/", play = false } = Astro.props;
   <style>
     .container {
       box-shadow: inset 0 0 0 2px white;
+      transition: background-color 0.3s;
     }
     .container:hover .svg {
       color: rgb(0, 0, 0, 0.8);
@@ -55,6 +56,22 @@ const { title, description, src, href = "/", play = false } = Astro.props;
     .container:focus {
       outline-offset: 4px;
       outline: 2px solid rgb(30 41 59 / 50%);
+    }
+    @media (prefers-color-scheme: dark) {
+      .container {
+        background-color: rgba(0, 0, 0, 0.1);
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+      }
+      .container:hover {
+        background-color: rgba(37, 37, 37, 0.4);
+      }
+      .container .svg {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .container:hover .svg {
+      color: rgba(218, 218, 218, 0.8);
+    }
     }
   </style>
 </a>

@@ -52,7 +52,7 @@
     width: 15vw;
   }
   @media (max-width: 640px) {
-    .blob{
+    .blob {
       width: 80vw;
     }
     .blob--white {
@@ -73,6 +73,14 @@
   }
   .blob--blue {
     background-color: #e0ebfa;
+  }
+  @media (prefers-color-scheme: dark) {
+    .blob--white {
+      background-color: black;
+    }
+    .blob{
+      opacity: 0.02;
+    }
   }
 </style>
 

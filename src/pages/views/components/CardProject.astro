@@ -7,30 +7,39 @@ interface Props {
 }
 // import PillTech from "../../../components/PillTech.astro";
 const { title, description, src, href = "/" } = Astro.props;
+// console.log(window)
 ---
 
 <a
   href={href}
-  class="item flex flex-col w-full rounded-xl p-3 relative border border-slate-200 hover:border-slate-300"
+  target="_blank"
+  class="item flex flex-col w-full rounded-xl p-3 relative border border-slate-200 hover:border-slate-300 dark:hover:border-black/90 dark:border-black/80"
 >
   {
     src && (
       <div class="flex w-full overflow-hidden h-full max-h-[180px] rounded-lg">
         <img
-          class="w-full h-[200px] object-cover  left-0 top-0 image"
+          class="w-full h-[200px] object-cover left-0 top-0 image"
           src={`mucks/${src}.png`}
+          alt="daniel mosvich image"
+        />
+        <img
+          class="w-full h-[200px] object-cover left-0 top-0 image-dark"
+          src={`mucks/dark/${src}.png`}
           alt="daniel mosvich image"
         />
       </div>
     )
   }
   <div class="flex flex-col w-full z-10">
-    <h1 class="font-bold text-slate-800/80 text-2xl mt-4">{title}</h1>
+    <h1 class="font-bold text-slate-800/80 dark:text-white text-2xl mt-4">
+      {title}
+    </h1>
     <div class="flex gap-2 mt-1">
       <!-- TECHNOLOGIES -->
       <slot />
     </div>
-    <p class="text-slate-800/70 font-[500] mt-2">
+    <p class="text-slate-800/70 dark:text-neutral-400 font-[500] mt-2">
       {description}
     </p>
   </div>
@@ -58,6 +67,10 @@ const { title, description, src, href = "/" } = Astro.props;
       scale 0.3s,
       object-position 0.3s;
     filter: grayscale(0.3);
+    content: attr(data-src);
+  }
+  .image-dark{
+    display: none;
   }
   .item:hover .image {
     scale: 1.15;
@@ -67,5 +80,20 @@ const { title, description, src, href = "/" } = Astro.props;
   .item:focus {
     outline-offset: 2px;
     outline: 4px solid rgb(30 41 59 / 50%);
+  }
+  @media (prefers-color-scheme: dark) {
+    .item {
+      background-color: rgba(0, 0, 0, 0.1);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    }
+    .item:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    .image{
+      display: none;
+    }
+    .image-dark{
+      display: block;
+    }
   }
 </style>

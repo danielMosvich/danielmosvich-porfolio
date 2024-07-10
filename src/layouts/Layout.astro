@@ -29,9 +29,15 @@ const { title } = Astro.props;
   }
   :root {
   }
-  body{
-    
+  body {
+    background-color: white;
     position: relative;
     overflow-x: hidden;
+  }
+  /* dark mode */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #161616;
+    }
   }
 </style>

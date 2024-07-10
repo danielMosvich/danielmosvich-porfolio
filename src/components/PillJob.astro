@@ -77,4 +77,10 @@ const { pulse, href = "/" } = Astro.props;
       transform: rotate(360deg) scaleY(6);
     }
   }
+  @media (prefers-color-scheme: dark) {
+    .container {
+      background-color: rgb(53, 75, 64);
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
 </style>

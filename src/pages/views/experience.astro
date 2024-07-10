@@ -3,31 +3,22 @@ import CardExperience from "./components/CardExperience.astro";
 ---
 
 <section style="margin-top: 0px;">
-  <h2 class="text-3xl font-[900] text-slate-900/80">Experience & Education</h2>
+  <h2 class="text-3xl font-[900] text-slate-900/80 dark:text-white">Experience & Education</h2>
   <ul class="mt-16 list-container rounded-lg">
     <CardExperience
       year="2023 - PRESENT"
       title="Frontend Developer"
-      description={`Creo diversas aplicaciones web, aprendiendo cosas nuevas y mejorando
-          las existentes. Me gusta trabajar en equipos y me gusta aprender de
-          otros desarrolladores. Me gusta trabajar en proyectos que me interesan
-          y me gusta trabajar en proyectos que me interesan`}
+      description={`I am dedicated to developing web applications that are useful for people in their daily lives. In the process I learn new technologies and methodologies to constantly improve my skills, ensuring that each project is better than the last and provides value.`}
     />
     <CardExperience
-      year="Mayo del 2022"
+      year="MAY 2022"
       title="Tecsup - Codigo"
-      description=`Estudie en el instituto tecsup, donde aprendí a programar en
-          JavaScript y React. Me gusta aprender nuevas tecnologías y me gusta
-          aprender de otros desarrolladores. Me gusta trabajar en proyectos que
-          me interesan y me gusta trabajar en proyectos que me interesan.`
+      description=`I studied at the Tecsup Institute, where I took a frontend developer bootcamp. During the bootcamp, I learned technologies such as React, TypeScript, Node, Express, MongoDB, PostgreSQL, and Python.`
     />
     <CardExperience
       year="2021 - 2022"
-      title="Udemy - Html, Css, Javascript"
-      description=`Estudie en el instituto tecsup, donde aprendí a programar en
-          JavaScript y React. Me gusta aprender nuevas tecnologías y me gusta
-          aprender de otros desarrolladores. Me gusta trabajar en proyectos que
-          me interesan y me gusta trabajar en proyectos que me interesan.`
+      title="Udemy"
+      description=`At the beginning of my career, I took many Udemy courses to learn HTML, CSS, and JavaScript. Even today I continue taking courses to learn new things and improve my skills as a programmer.`
     />
   </ul>
 </section>
@@ -36,7 +27,7 @@ import CardExperience from "./components/CardExperience.astro";
   .list-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
       /* background: rgba(255, 255, 255, 0.2); */
     /* backdrop-filter: blur(10px); */
   }

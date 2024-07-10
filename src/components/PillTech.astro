@@ -6,7 +6,7 @@ const { color = "gray" } = Astro.props;
 ---
 
 <div
-  class="pill bg-gradient-to-b from-slate-200/50 to-slate-300/50 text-slate-600/80 text-xs"
+  class="pill bg-gradient-to-b from-slate-200/50 to-slate-300/50 text-slate-600/80 text-xs dark:text-white"
 >
   <slot />
 </div>
@@ -27,5 +27,12 @@ const { color = "gray" } = Astro.props;
     /* background-color: rgba(228, 229, 230, 0.3); */
     border: 1px solid rgb(203 213 225 / 50%);
     font-weight: 600;
+  }
+  @media (prefers-color-scheme: dark) {
+    .pill {
+      background: rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(7, 7, 7, 0.8);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    }
   }
 </style>
