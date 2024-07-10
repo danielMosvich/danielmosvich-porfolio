@@ -1,0 +1,32 @@
+<a href="https://www.instagram.com/danielmosvich" target="_blank" class="flex flex-col w-52 h-52 min-w-52 min-h-52 relative mt-10 lg:mt-0">
+  <!-- <div class="w-52 h-52 min-w-52 min-h-52 p-2 ring-2 ring-zinc-400 rounded-xl">
+  </div> -->
+  <img class="image-1 image" src="/assets/photo1.jpg" alt="" />
+  <img class="image-2 image hidden md:block" src="/assets/photo2.jpg" alt="" />
+  <img class="image-3 image hidden md:block" src="/assets/photo3.jpg" alt="" />
+</a>
+<style>
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  }
+  .image-1 {
+    z-index: 5;
+  }
+  .image-2 {
+    z-index: 4;
+    transform: translate(50px, 25px) rotate(8deg) scale(0.9);
+    opacity: 0.8;
+  }
+  .image-3 {
+    z-index: 3;
+    transform: translate(-40px, 50px) rotate(-10deg) scale(0.8);
+    opacity: 0.8;
+  }
+</style>

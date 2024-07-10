@@ -1,0 +1,68 @@
+---
+import Pill from "../../components/Pill.astro";
+import PillJob from "../../components/PillJob.astro";
+---
+
+<section class="max-w-xl py-16 md:py-48">
+  <picture>
+    <img
+      class="w-16 h-16 rounded-full object-cover ring ring-slate-300"
+      src="https://i.pinimg.com/280x280_RS/1c/13/4f/1c134f90b942a69af46d432882a2a4dd.jpg"
+      alt="daniel mosvich image"
+      width="64"
+      height="64"
+    />
+  </picture>
+  <h1 class="font-bold mt-3 text-4xl md:text-5xl tracking-tight text-slate-800">
+    Daniel Mosvich
+  </h1>
+  <p class="mb-3 mt-3 text-xl text-slate-800">
+    Soy diseñador <b class="font-[700] text-lime-800/80">web y frontend</b>
+    con sede en Madrid. Trabajo actualmente en Cinetic Digital.
+  </p>
+  <div class="flex flex-col sm:flex-row gap-2 mt-5">
+    <PillJob href="https://danielmosvich.dev" pulse
+      >Disponible para trabajar</PillJob
+    >
+    <hr class="mx-1 hidden sm:flex" />
+    <div class="flex gap-2">
+      <Pill href="https://github.com/danielMosvich">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1.2rem"
+          height="1.2rem"
+          viewBox="0 0 22 22"
+          ><path
+            d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4.44c-.32-.07-.33-.68-.33-.89l.01-2.47c0-.84-.29-1.39-.61-1.67c2.01-.22 4.11-.97 4.11-4.44c0-.98-.35-1.79-.92-2.42c.09-.22.4-1.14-.09-2.38c0 0-.76-.23-2.48.93c-.72-.2-1.48-.3-2.25-.31c-.76.01-1.54.11-2.25.31c-1.72-1.16-2.48-.93-2.48-.93c-.49 1.24-.18 2.16-.09 2.38c-.57.63-.92 1.44-.92 2.42c0 3.47 2.1 4.22 4.1 4.47c-.26.2-.49.6-.57 1.18c-.52.23-1.82.63-2.62-.75c0 0-.48-.86-1.38-.93c0 0-.88 0-.06.55c0 0 .59.28 1 1.32c0 0 .52 1.75 3.03 1.21l.01 1.53c0 .21-.02.82-.34.89H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"
+            fill="currentColor"></path></svg
+        ><span>Github</span>
+      </Pill>
+      <Pill href="https://github.com/danielMosvich">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 16 16"
+          ><path
+            fill="currentColor"
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248c-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586c.173-.431.568-.878 1.232-.878c.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252c-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+          ></path></svg
+        >
+        <span>Linkedin</span>
+      </Pill>
+      <Pill href="https://github.com/danielMosvich">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 24 24"
+          ><path
+            fill="currentColor"
+            d="M17.751 3h3.067l-6.7 7.625L22 21h-6.172l-4.833-6.293L5.464 21h-3.07l7.167-8.155L2 3h6.328l4.37 5.752zm-1.076 16.172h1.7L7.404 4.732H5.58z"
+          ></path></svg
+        >
+        <!-- <span></span> -->
+      </Pill>
+    </div>
+  </div>
+</section>

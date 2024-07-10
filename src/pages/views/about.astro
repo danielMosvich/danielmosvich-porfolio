@@ -1,0 +1,88 @@
+---
+import Gallery from "./components/Gallery.astro";
+import MoreButton from "./components/MoreButton.astro";
+import MoreButtonBig from "./components/MoreButtonBig.astro";
+---
+
+<section>
+  <h2 class="text-3xl font-[900] text-black/80">About me</h2>
+  <div class="container w-full">
+    <div>
+      <p class="font-[500] text-black/70 mt-3 text-pretty">
+        Me llamo Jose Daniel, empece hace hace 4 años, ya que me nacia crear
+        aplicaciones en general y se me cruzo el hermoso camino de la
+        programacion web, desde entonces voy mejorando mis conocimientos y me
+        dedican mucho tiempo a aprender cosas nuevas, me gusta aprender y me
+        gusta compartir conocimientos.
+      </p>
+      <div class="mt-4 h-fit grid gap-3 sm:grid-cols-2">
+        <MoreButtonBig
+          title="My skills"
+          description="watch my skill technologies"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png"
+          href="/skills"
+        />
+        <section class="gap-3 w-full sm:w-auto footer-more">
+          <MoreButton
+            play
+            title="Music for programing"
+            description="Playlist by me"
+            src="/assets/youtube.jpg"
+            href="https://music.youtube.com/playlist?list=PL5aJwmtVEhsvGpjKwXen-QfFhY29u01o8&si=T2dT75yxLFoxBKW5"
+          />
+          <MoreButton
+            title="Send me a message"
+            href="mailto:danielmosvich.dev@gmail.com"
+          >
+            <svg
+              class="text-black/70"
+              xmlns="http://www.w3.org/2000/svg"
+              width="40px"
+              height="40px"
+              viewBox="0 0 1024 1024"
+              ><path
+                fill="currentColor"
+                d="M128 224v512a64 64 0 0 0 64 64h640a64 64 0 0 0 64-64V224zm0-64h768a64 64 0 0 1 64 64v512a128 128 0 0 1-128 128H192A128 128 0 0 1 64 736V224a64 64 0 0 1 64-64"
+              ></path><path
+                fill="currentColor"
+                d="M904 224L656.512 506.88a192 192 0 0 1-289.024 0L120 224zm-698.944 0l210.56 240.704a128 128 0 0 0 192.704 0L818.944 224z"
+              ></path></svg
+            >
+          </MoreButton>
+        </section>
+      </div>
+    </div>
+    <Gallery />
+  </div>
+</section>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 3rem;
+  }
+  @media (min-width: 1024px) {
+    .container {
+      gap: 5rem;
+      flex-direction: row;
+    }
+  }
+  .footer-more {
+    display: flex;
+    flex-direction: row;
+  }
+  @media (max-width: 430px) {
+    .footer-more {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media (min-width: 430px) {
+    .footer-more {
+      flex-direction: column;
+    }
+  }
+</style>
+<!-- !INVESTIGAR SOBRE EL ORDER CSS -->

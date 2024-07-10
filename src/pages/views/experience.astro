@@ -1,0 +1,54 @@
+---
+import CardExperience from "./components/CardExperience.astro";
+---
+
+<section style="margin-top: 0px;">
+  <h2 class="text-3xl font-[900] text-slate-900/80">Experience & Education</h2>
+  <ul class="mt-16 list-container rounded-lg">
+    <CardExperience
+      year="2023 - PRESENT"
+      title="Frontend Developer"
+      description={`Creo diversas aplicaciones web, aprendiendo cosas nuevas y mejorando
+          las existentes. Me gusta trabajar en equipos y me gusta aprender de
+          otros desarrolladores. Me gusta trabajar en proyectos que me interesan
+          y me gusta trabajar en proyectos que me interesan`}
+    />
+    <CardExperience
+      year="Mayo del 2022"
+      title="Tecsup - Codigo"
+      description=`Estudie en el instituto tecsup, donde aprendí a programar en
+          JavaScript y React. Me gusta aprender nuevas tecnologías y me gusta
+          aprender de otros desarrolladores. Me gusta trabajar en proyectos que
+          me interesan y me gusta trabajar en proyectos que me interesan.`
+    />
+    <CardExperience
+      year="2021 - 2022"
+      title="Udemy - Html, Css, Javascript"
+      description=`Estudie en el instituto tecsup, donde aprendí a programar en
+          JavaScript y React. Me gusta aprender nuevas tecnologías y me gusta
+          aprender de otros desarrolladores. Me gusta trabajar en proyectos que
+          me interesan y me gusta trabajar en proyectos que me interesan.`
+    />
+  </ul>
+</section>
+
+<style>
+  .list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+      /* background: rgba(255, 255, 255, 0.2); */
+    /* backdrop-filter: blur(10px); */
+  }
+  /* }
+  .list-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  @media (min-width: 1024px) {
+    .list-item {
+      gap: 7rem;
+    }
+  } */
+</style>
