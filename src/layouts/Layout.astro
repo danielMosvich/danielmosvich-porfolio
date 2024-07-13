@@ -1,4 +1,6 @@
 ---
+import BgEffect from "../components/BgEffect.astro";
+
 interface Props {
   title: string;
 }
@@ -17,7 +19,16 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <div
+      class="fixed top-0 z-[-2] h-screen w-screen bg-transparent bg-[radial-gradient(ellipse_100%_70%_at_50%_-10%,rgba(183,250,96,0.3),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_100%_70%_at_50%_-10%,rgba(183,250,96,0.1),rgba(255,255,255,0))]"
+    >
+    </div>
+    <BgEffect />
     <slot />
+    <div
+      class="absolute bottom-0 z-[-2] h-screen w-screen bg-transparent bg-[radial-gradient(ellipse_100%_70%_at_50%_120%,rgba(183,250,96,0.3),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_100%_70%_at_50%_120%,rgba(183,250,96,0.1),rgba(255,255,255,0))]"
+    >
+    </div>
   </body>
 </html>
 <style is:global>

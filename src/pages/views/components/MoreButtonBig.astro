@@ -10,13 +10,12 @@ const { title, description, src, href = "/" } = Astro.props;
 
 <a
   href={href}
-  target="_blank"
   class="container flex flex-col w-full items-start gap-3 cursor-pointer hover:bg-white bg-white/40 rounded-lg p-3 border border-zinc-300"
 >
   <div class="flex gap-3">
     {
       src ? (
-        <img class="w-10 h-10 rounded-lg" src={src} alt={title} />
+        <img class="w-10 h-10 rounded-lg" src={src} alt={title} /> 
       ) : (
         <slot />
       )
@@ -35,8 +34,14 @@ const { title, description, src, href = "/" } = Astro.props;
     </div>
   </div>
 
-  <div class="skill w-full h-full bg-rose-500">
+  <div class="skill w-full h-full">
     <!-- <img class="rounded-lg  w-full object-cover" src="https://i.pinimg.com/564x/76/17/55/761755eec5536af602e74215d0f1d1c9.jpg" alt=""> -->
+     <img class="image-small" src="https://www.svgrepo.com/show/303206/javascript-logo.svg" alt="">
+     <img class="image-small" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="">
+     <img class="image-small" src="https://static-00.iconduck.com/assets.00/next-js-icon-2048x2048-5dqjgeku.png" alt="">
+     <img class="image-small" src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" alt="">
+     <img class="image-small" src="https://cdn.icon-icons.com/icons2/3911/PNG/512/astro_logo_icon_247543.png" alt="">
+     <img class="image-small" src="https://www.svgrepo.com/show/374118/tailwind.svg" alt="">
   </div>
 </a>
 
@@ -46,10 +51,21 @@ const { title, description, src, href = "/" } = Astro.props;
     overflow: hidden;
     transition: background-color 0.3s;
   }
+  .image-small{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 4px;
+  }
   .skill {
-    background: url("https://i.pinimg.com/564x/76/17/55/761755eec5536af602e74215d0f1d1c9.jpg");
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    filter: grayscale(0.5);
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 30%, rgba(255, 255, 255, 0.7) 100%);
+    /* background: url("https://i.pinimg.com/564x/76/17/55/761755eec5536af602e74215d0f1d1c9.jpg");
     background-position: center center;
-    background-size: cover;
+    background-size: cover; */
     border-radius: 4px;
   }
   .container:focus {

@@ -67,9 +67,8 @@ const { title, description, src, href = "/" } = Astro.props;
       scale 0.3s,
       object-position 0.3s;
     filter: grayscale(0.3);
-    content: attr(data-src);
   }
-  .image-dark{
+  .image-dark {
     display: none;
   }
   .item:hover .image {
@@ -89,11 +88,25 @@ const { title, description, src, href = "/" } = Astro.props;
     .item:hover {
       background-color: rgba(0, 0, 0, 0.2);
     }
-    .image{
+    .image {
       display: none;
     }
-    .image-dark{
+    .image-dark {
       display: block;
+      object-position: 0px -25px;
+      transition:
+        scale 0.3s,
+        object-position 0.3s;
+      filter: grayscale(0.3);
+    }
+    .item:hover .image-dark {
+    scale: 1.15;
+    object-position: 0px -35px;
+    filter: grayscale(0);
+  }
+    .item:focus {
+      outline-offset: 2px;
+      outline: 4px solid rgba(127, 147, 182, 0.5);
     }
   }
 </style>

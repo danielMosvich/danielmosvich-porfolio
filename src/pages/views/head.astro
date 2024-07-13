@@ -3,28 +3,38 @@ import Pill from "../../components/Pill.astro";
 import PillJob from "../../components/PillJob.astro";
 ---
 
-<section class="max-w-xl py-16 md:py-48">
-  <picture>
+<section class="max-w-xl pb-16 mt-20 md:pb-48 md:mt-48 relative">
+  <img
+    class="md:w-36 w-16 md:h-36 h-16 rounded-full object-cover md:-translate-x-11 -translate-y-[85%] absolute top-0"
+    src="/assets/typescript.png"
+    alt="daniel mosvich image"
+    width="144"
+    height="144"
+  />
+  <!-- <picture>
     <img
-      class="w-16 h-16 rounded-full object-cover ring ring-slate-300"
-      src="https://i.pinimg.com/280x280_RS/1c/13/4f/1c134f90b942a69af46d432882a2a4dd.jpg"
+      class="w-36 h-36 rounded-full object-cover -translate-x-11 translate-y-5"
+      src="/assets/typescript.png"
       alt="daniel mosvich image"
-      width="64"
-      height="64"
+      width="144"
+      height="144"
     />
-  </picture>
+  </picture> -->
   <h1
-    class="font-bold mt-3 text-4xl md:text-5xl tracking-tight text-slate-800 dark:text-white"
+    class="font-bold mt-0 text-4xl md:text-5xl tracking-tight text-slate-800 dark:text-white"
   >
     Daniel Mosvich
   </h1>
   <p class="mb-3 mt-3 text-xl text-slate-800 dark:text-gray-300">
-    I am a <b class="font-[700] text-lime-800/80 dark:text-lime-500">web developer</b> living in Peru,
-    currently working and studying independently
+    I am a <b class="font-[700] text-lime-800/80 dark:text-lime-500"
+      >web developer and graphic designer</b
+    > with over 4 years of experience, living in Peru. I currently work and study
+    independently.
   </p>
   <div class="flex flex-col sm:flex-row gap-2 mt-5">
-    <PillJob href="https://www.linkedin.com/in/jose-daniel-reyes-mosvich-53247a238" pulse
-      >Disponible para trabajar</PillJob
+    <PillJob
+      href="https://www.linkedin.com/in/jose-daniel-reyes-mosvich-53247a238"
+      pulse>Disponible para trabajar</PillJob
     >
     <hr class="mx-1 hidden sm:flex" />
     <div class="flex gap-2">
@@ -39,7 +49,9 @@ import PillJob from "../../components/PillJob.astro";
             fill="currentColor"></path></svg
         ><span>Github</span>
       </Pill>
-      <Pill href="https://www.linkedin.com/in/jose-daniel-reyes-mosvich-53247a238">
+      <Pill
+        href="https://www.linkedin.com/in/jose-daniel-reyes-mosvich-53247a238"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
