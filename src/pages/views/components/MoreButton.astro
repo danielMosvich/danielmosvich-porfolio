@@ -22,7 +22,7 @@ const { title, description, src, href = "/", play = false } = Astro.props;
       {title}
     </h3>
     <h5
-      class="text-black/60 dark:text-neutral-400 font-[500] text-sm leading-none whitespace-nowrap text-ellipsis"
+      class="text-black/60 dark:text-neutral-400 font-[500] text-sm leading-none pr-[34px]"
     >
       {description}
     </h5>
@@ -70,8 +70,8 @@ const { title, description, src, href = "/", play = false } = Astro.props;
         color: rgba(255, 255, 255, 0.5);
       }
       .container:hover .svg {
-      color: rgba(218, 218, 218, 0.8);
-    }
+        color: rgba(218, 218, 218, 0.8);
+      }
     }
   </style>
 </a>
