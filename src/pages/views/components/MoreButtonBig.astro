@@ -15,12 +15,12 @@ const { title, description, src, href = "/" } = Astro.props;
   <div class="flex gap-3">
     {
       src ? (
-        <img class="w-10 h-10 rounded-lg" src={src} alt={title} /> 
+        <img class="w-10 h-10 rounded-lg" src={src} alt={title} />
       ) : (
         <slot />
       )
     }
-    <div class="flex flex-col items-center justify-center gap-1 ">
+    <div class="flex flex-col items-center justify-center gap-1">
       <h3
         class="w-full font-semibold text-black/80 dark:text-white whitespace-nowrap text-ellipsis overflow-hidden text-sm leading-none"
       >
@@ -36,10 +36,22 @@ const { title, description, src, href = "/" } = Astro.props;
 
   <div class="skill w-full h-full">
     <!-- <img class="rounded-lg  w-full object-cover" src="https://i.pinimg.com/564x/76/17/55/761755eec5536af602e74215d0f1d1c9.jpg" alt=""> -->
-     <img class="image-small" src="https://www.svgrepo.com/show/303206/javascript-logo.svg" alt="">
-     <img class="image-small" src="https://www.svgrepo.com/show/374118/tailwind.svg" alt="">
-     <img class="image-small" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="">
-     <img class="image-small" src="https://nodejs.org/static/logos/jsIconGreen.svg" alt="">
+    <img
+      class="image-small"
+      src="https://www.svgrepo.com/show/303206/javascript-logo.svg"
+      alt=""
+    />
+    <img
+      class="image-small"
+      src="https://www.svgrepo.com/show/374118/tailwind.svg"
+      alt=""
+    />
+    <!-- <img class="image-small" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt=""> -->
+    <img
+      class="image-small"
+      src="https://nodejs.org/static/logos/jsIconGreen.svg"
+      alt=""
+    />
   </div>
 </a>
 
@@ -49,7 +61,7 @@ const { title, description, src, href = "/" } = Astro.props;
     overflow: hidden;
     transition: background-color 0.3s;
   }
-  .image-small{
+  .image-small {
     width: 30px;
     height: 30px;
     object-fit: contain;
@@ -60,7 +72,11 @@ const { title, description, src, href = "/" } = Astro.props;
     gap: 1rem;
     align-items: center;
     filter: grayscale(0.5);
-    mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 30%, rgba(255, 255, 255, 0.7) 100%);
+    mask-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(255, 255, 255, 0.7) 100%
+    );
     /* background: url("https://i.pinimg.com/564x/76/17/55/761755eec5536af602e74215d0f1d1c9.jpg");
     background-position: center center;
     background-size: cover; */
